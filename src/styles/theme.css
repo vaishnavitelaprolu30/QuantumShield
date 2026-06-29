@@ -1,0 +1,267 @@
+@custom-variant dark (&:is(.dark *));
+
+/* =====================================================
+   QUANTUMSHIELD++ — Quantum Cyber Defense Theme
+   ===================================================== */
+
+:root {
+  --font-size: 16px;
+
+  /* === Quantum Color Palette === */
+  --qs-bg-deep:      #020408;
+  --qs-bg-base:      #060d1a;
+  --qs-bg-surface:   #0a1628;
+  --qs-bg-elevated:  #0f1e35;
+  --qs-bg-panel:     rgba(6, 13, 26, 0.85);
+
+  --qs-cyan:         #00f5ff;
+  --qs-cyan-dim:     #00c4cc;
+  --qs-cyan-glow:    rgba(0, 245, 255, 0.25);
+  --qs-cyan-faint:   rgba(0, 245, 255, 0.08);
+
+  --qs-purple:       #8b5cf6;
+  --qs-purple-dim:   #6d28d9;
+  --qs-purple-glow:  rgba(139, 92, 246, 0.25);
+  --qs-purple-faint: rgba(139, 92, 246, 0.08);
+
+  --qs-red:          #ff2244;
+  --qs-red-dim:      #cc1133;
+  --qs-red-glow:     rgba(255, 34, 68, 0.25);
+  --qs-red-faint:    rgba(255, 34, 68, 0.08);
+
+  --qs-green:        #00ff88;
+  --qs-green-dim:    #00cc66;
+  --qs-green-glow:   rgba(0, 255, 136, 0.25);
+  --qs-green-faint:  rgba(0, 255, 136, 0.08);
+
+  --qs-amber:        #ffaa00;
+  --qs-amber-dim:    #cc8800;
+  --qs-amber-glow:   rgba(255, 170, 0, 0.25);
+  --qs-amber-faint:  rgba(255, 170, 0, 0.08);
+
+  --qs-white:        #e8f4ff;
+  --qs-gray-100:     #c4d4e8;
+  --qs-gray-300:     #7a95b8;
+  --qs-gray-500:     #3a5070;
+  --qs-gray-700:     #1a2d45;
+  --qs-gray-900:     #0a1628;
+
+  /* === Glow Effects === */
+  --glow-cyan:   0 0 10px rgba(0, 245, 255, 0.5), 0 0 30px rgba(0, 245, 255, 0.2);
+  --glow-red:    0 0 10px rgba(255, 34, 68, 0.5), 0 0 30px rgba(255, 34, 68, 0.2);
+  --glow-purple: 0 0 10px rgba(139, 92, 246, 0.5), 0 0 30px rgba(139, 92, 246, 0.2);
+  --glow-green:  0 0 10px rgba(0, 255, 136, 0.5), 0 0 30px rgba(0, 255, 136, 0.2);
+  --glow-amber:  0 0 10px rgba(255, 170, 0, 0.5), 0 0 30px rgba(255, 170, 0, 0.2);
+
+  /* === Borders === */
+  --border-cyan:   rgba(0, 245, 255, 0.2);
+  --border-red:    rgba(255, 34, 68, 0.2);
+  --border-purple: rgba(139, 92, 246, 0.2);
+  --border-dim:    rgba(255, 255, 255, 0.06);
+
+  /* === Tailwind Token Mapping === */
+  --background: var(--qs-bg-deep);
+  --foreground: var(--qs-white);
+  --card: var(--qs-bg-surface);
+  --card-foreground: var(--qs-white);
+  --popover: var(--qs-bg-elevated);
+  --popover-foreground: var(--qs-white);
+  --primary: var(--qs-cyan);
+  --primary-foreground: var(--qs-bg-deep);
+  --secondary: var(--qs-bg-elevated);
+  --secondary-foreground: var(--qs-gray-100);
+  --muted: var(--qs-bg-elevated);
+  --muted-foreground: var(--qs-gray-300);
+  --accent: var(--qs-purple-faint);
+  --accent-foreground: var(--qs-purple);
+  --destructive: var(--qs-red);
+  --destructive-foreground: #ffffff;
+  --border: var(--border-dim);
+  --input: var(--qs-bg-elevated);
+  --input-background: var(--qs-bg-surface);
+  --switch-background: var(--qs-gray-500);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: var(--qs-cyan);
+  --chart-1: var(--qs-cyan);
+  --chart-2: var(--qs-purple);
+  --chart-3: var(--qs-red);
+  --chart-4: var(--qs-green);
+  --chart-5: var(--qs-amber);
+  --radius: 0.625rem;
+
+  /* Sidebar */
+  --sidebar: var(--qs-bg-surface);
+  --sidebar-foreground: var(--qs-white);
+  --sidebar-primary: var(--qs-cyan);
+  --sidebar-primary-foreground: var(--qs-bg-deep);
+  --sidebar-accent: var(--qs-bg-elevated);
+  --sidebar-accent-foreground: var(--qs-gray-100);
+  --sidebar-border: var(--border-dim);
+  --sidebar-ring: var(--qs-cyan);
+}
+
+/* Dark mode — same as root for this app (always dark) */
+.dark {
+  --background: var(--qs-bg-deep);
+  --foreground: var(--qs-white);
+  --card: var(--qs-bg-surface);
+  --card-foreground: var(--qs-white);
+  --popover: var(--qs-bg-elevated);
+  --popover-foreground: var(--qs-white);
+  --primary: var(--qs-cyan);
+  --primary-foreground: var(--qs-bg-deep);
+  --secondary: var(--qs-bg-elevated);
+  --secondary-foreground: var(--qs-gray-100);
+  --muted: var(--qs-bg-elevated);
+  --muted-foreground: var(--qs-gray-300);
+  --accent: var(--qs-purple-faint);
+  --accent-foreground: var(--qs-purple);
+  --destructive: var(--qs-red);
+  --destructive-foreground: #ffffff;
+  --border: var(--border-dim);
+  --input: var(--qs-bg-elevated);
+  --ring: var(--qs-cyan);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: var(--qs-cyan);
+  --chart-2: var(--qs-purple);
+  --chart-3: var(--qs-red);
+  --chart-4: var(--qs-green);
+  --chart-5: var(--qs-amber);
+  --sidebar: var(--qs-bg-surface);
+  --sidebar-foreground: var(--qs-white);
+  --sidebar-primary: var(--qs-cyan);
+  --sidebar-primary-foreground: var(--qs-bg-deep);
+  --sidebar-accent: var(--qs-bg-elevated);
+  --sidebar-accent-foreground: var(--qs-gray-100);
+  --sidebar-border: var(--border-dim);
+  --sidebar-ring: var(--qs-cyan);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background-color: #020408;
+    color: #e8f4ff;
+    font-family: 'Inter', 'Outfit', system-ui, sans-serif;
+  }
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  /* === Quantum scrollbar === */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #060d1a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 245, 255, 0.3);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 245, 255, 0.6);
+  }
+
+  /* === Typography === */
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-sm);
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: var(--qs-bg-elevated);
+    color: var(--qs-white);
+    border-color: var(--border-dim);
+  }
+
+  /* === Selection === */
+  ::selection {
+    background: rgba(0, 245, 255, 0.2);
+    color: #00f5ff;
+  }
+}
